@@ -1,0 +1,846 @@
+// colors
+$maincolor: #01c2a5;
+$maincolorrgba: rgba(1, 194, 165, 0.1);
+$deletecolor: #d0211c;
+
+// utility classes
+* {
+    font-family: "Nunito Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.msg-ricevuto{
+    color: $maincolor;
+    background: #ccc;
+}
+
+// tabella index
+td {
+    height: 150px;
+
+    a {
+        display: block;
+        height: 100%;
+        color: black;
+
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+.layout {
+    min-height: 100vh;
+
+    > main {
+        min-height: calc(78vh - 20px);
+    }
+}
+
+.inline-b {
+    display: inline-block;
+}
+
+.custom-h1 {
+    color: $maincolor;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.title {
+    color: $maincolor;
+    font-size: 26px;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.user-image {
+    border-radius: 50%;
+    width: 160px;
+}
+
+.relative {
+    position: relative;
+}
+
+.b-absolute-tr {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.b-absolute-tl {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#user_id {
+    display: none;
+}
+
+.card {
+    padding: 20px;
+}
+
+// buttons
+.custom-button {
+    margin: 5px 5px 5px 0;
+    background: $maincolor;
+    border: 2px solid $maincolor;
+    font-size: 15px;
+    color: #fff;
+
+    a {
+        color: #fff;
+    }
+
+    &:hover {
+        color: $maincolor;
+        background: #fff;
+        font-weight: bold;
+
+        a {
+            color: $maincolor;
+            font-weight: bold;
+        }
+    }
+}
+
+.button-none {
+    border: none;
+    background: none;
+    margin-left: -10px;
+    color: $maincolor;
+    font-size: 16px;
+    margin-right: 15px;
+
+    a {
+        color: $maincolor;
+
+        &:hover {
+            color: $maincolor;
+        }
+    }
+
+    &:hover {
+        font-weight: bold;
+        transform: scale(1.2);
+        color: $maincolor;
+    }
+}
+
+.delete {
+    background: $deletecolor;
+    border-color: $deletecolor;
+
+    &:hover {
+        background: #fff;
+        color: $deletecolor;
+    }
+}
+
+// select
+.custom-select {
+    width: 320px;
+    margin-left: 7px;
+
+    option:hover {
+        background: $maincolor;
+        color: #fff;
+    }
+}
+
+// navbar
+#main-nav {
+    background: $maincolor;
+    color: #fff;
+    box-shadow: none;
+    height: 12vh;
+
+    .navbar-brand {
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    a {
+        color: #fff;
+
+        img {
+            vertical-align: -14px;
+            margin-right: 2px;
+            width: 50px;
+            border-radius: 50%;
+        }
+    }
+
+    .nav-right {
+        font-size: 18px;
+
+        .nav-item-guest:hover,
+        .nav-item-user:hover {
+            font-weight: bold;
+        }
+    }
+
+    #dropp {
+        background: #fff;
+        color: #000;
+
+        &:hover {
+            color: $maincolor;
+            font-weight: bold;
+        }
+    }
+}
+
+// login
+.login-card {
+    margin-top: 100px;
+
+    a {
+        color: $maincolor;
+
+        &:hover {
+            color: $maincolor;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+}
+
+// register
+.register-card {
+    margin-top: 20px;
+
+    h2 {
+        margin-left: 90px;
+    }
+
+    .invalid-spec {
+        margin-left: 228px;
+    }
+}
+
+// jumbotron
+.jum {
+    background: $maincolor;
+    height: 380px;
+    overflow: hidden;
+
+    &-container {
+        position: relative;
+        height: 380px;
+    }
+
+    &-left {
+        position: absolute;
+        bottom: 120px;
+
+        @media screen and (max-width: 1200px) {
+            top: 60px;
+        }
+
+        @media screen and (max-width: 991px) {
+            top: 30px;
+        }
+
+        .jum-title {
+            color: #fff;
+            font-size: 30px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+
+            @media screen and (max-width: 991px) {
+                margin-bottom: 0;
+            }
+
+            @media screen and (max-width: 575px) {
+                font-size: 28px;
+                line-height: 29px;
+            }
+        }
+
+        select {
+            cursor: pointer;
+            display: inline-block;
+            color: $maincolor;
+            width: 80%;
+
+            &:focus {
+                color: $maincolor;
+            }
+
+            option:hover {
+                background: $maincolor;
+                color: #fff;
+            }
+        }
+
+        .search {
+            font-size: 19px;
+            width: 17%;
+            text-align: center;
+            display: inline-block;
+
+            &:hover {
+                color: #fff;
+                font-weight: bold;
+                background-color: $maincolor;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    img {
+        height: 360px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        @media screen and (max-width: 1200px) {
+            height: 75%;
+            right: -50px;
+        }
+
+        @media screen and (max-width: 991px) {
+            bottom: -50px;
+        }
+    }
+}
+
+// homepage
+.evidence {
+    h2 {
+        margin: 90px 0 0 20px;
+        font-size: 30px;
+
+        @media screen and (max-width: 992px) {
+            text-align: center;
+            margin: 20px 0;
+        }
+    }
+
+    .evidence-card {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 992px) {
+            justify-content: center;
+        }
+
+        a {
+            color: inherit;
+            text-align: center;
+
+            &:hover {
+                text-decoration: none;
+                color: $maincolor;
+            }
+        }
+
+        .card {
+            text-align: center;
+            width: 260px;
+            margin: 5px 10px 10px 0;
+            min-height: 360px;
+
+            @media screen and (max-width: 1200px) {
+                width: 210px;
+                margin: 5px 15px 10px 0;
+            }
+
+            @media screen and (max-width: 991px) {
+                margin: 5px 10px 10px 0;
+            }
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+        .doctor-name {
+            margin: 30px 0 10px 0;
+        }
+    }
+}
+
+// index
+.index {
+    .search {
+        display: inline-block;
+
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+    }
+
+    table {
+        margin-top: 20px;
+
+        .average {
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
+        }
+
+        .img-col {
+            width: 200px;
+            text-align: center;
+            position: relative;
+
+            .sponsored-doc {
+                width: 40px;
+                position: absolute;
+                padding: 5px;
+                right: 10%;
+                bottom: 13%;
+                border-radius: 50%;
+                border: 1px solid $maincolor;
+                background-color: white;
+
+            }
+
+            @media screen and (max-width: 767px) {
+                width: 160px;
+            }
+
+            img {
+                @media screen and (max-width: 575px) {
+                    width: 120px;
+                }
+            }
+        }
+    }
+}
+
+// dashboard
+.all-services {
+    display: flex;
+    flex-wrap: wrap;
+
+    .dash-services {
+        width: calc(50% - 5px);
+        margin: 5px 5px 0 0;
+        position: relative;
+        padding-right: 40px;
+
+        &:hover {
+            color: $maincolor;
+            border-color: $maincolor;
+        }
+
+        .del-b {
+            font-size: 14px;
+            padding: 2px 5px;
+            position: absolute;
+            top: 10px;
+            right: 0;
+            color: $deletecolor;
+        }
+    }
+}
+
+.dash-card {
+    margin-top: 40px;
+
+    .review-card {
+        margin: 5px 0;
+    }
+
+    .dash-info {
+        width: 300px;
+    }
+
+    .dash-buttons {
+        width: 250px;
+
+        button {
+            margin-bottom: 0;
+            font-size: 12px;
+            padding: 2px 5px;
+
+            i {
+                margin-right: 3px;
+            }
+        }
+    }
+}
+
+.sponsor-check {
+    color: $maincolor;
+}
+
+.logged {
+    color: $maincolor;
+    font-size: 10px;
+    vertical-align: middle;
+}
+
+//edit
+.edit-card {
+    margin: 20px auto;
+    width: 600px;
+    padding: 30px 50px;
+
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 575px) {
+        padding: 0 20px;
+    }
+
+
+    .back {
+        h1 {
+            font-size: 25px;
+            margin-top: 0;
+        }
+    }
+
+    .form {
+        position: relative;
+
+        .input-file {
+            border: 1px solid #cfd5db;
+            padding: 3px;
+            border-radius: 5px;
+        }
+
+        .scegli-file {
+            padding: 1px 7px;
+        }
+
+        input {
+            width: 500px;
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
+        }
+
+        select {
+            width: 500px;
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
+
+            option:hover {
+                background-color: $maincolor;
+                color: #fff;
+            }
+        }
+
+        .modifica {
+            text-align: right;
+        }
+    }
+}
+
+// show
+.doctor-card {
+    margin-top: 30px;
+    position: relative;
+    padding: 40px;
+
+    .card-body {
+        display: flex;
+        @media screen and (max-width: 1200px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    .doc-info {
+        width: 560px;
+        margin-bottom: 30px;
+        margin-right: 60px;
+        vertical-align: top;
+
+        @media screen and (max-width: 1200px) {
+            margin-right: 0;
+        }
+
+        @media screen and (max-width: 991px) {
+            width: 450px;
+        }
+
+        @media screen and (max-width: 575px) {
+            width: 350px;
+        }
+
+        img {
+            vertical-align: top;
+
+            @media screen and (max-width: 575px) {
+                margin-left: 80px;
+            }
+        }
+
+        .box {
+            width: 310px;
+            margin-top: 20px;
+
+            @media screen and (max-width: 1200px) {
+                text-align: center;
+                margin-left: 10px;
+            }
+
+            @media screen and (max-width: 991px) {
+                width: 200px;
+            }
+
+            @media screen and (max-width: 575px) {
+                margin-left: 60px;
+            }
+        }
+    }
+
+    #specs {
+        margin-bottom: 10px;
+
+        h5 {
+            margin-bottom: -2px;
+        }
+    }
+
+    #mail {
+        margin-top: -15px;
+    }
+
+    .card-text {
+        margin: 2px 0;
+        font-size: 14px;
+
+        strong {
+            font-size: 18px;
+            margin-right: 5px;
+        }
+    }
+
+    button i {
+        margin-right: 5px;
+    }
+
+    .prestazioni{
+
+        @media screen and (max-width: 1200px) {
+            width: 100%;
+        }
+
+        .service-card {
+            width: 370px;
+            margin-bottom: 5px;
+
+            &:hover {
+                border-color: $maincolor;
+                color: $maincolor;
+            }
+        }
+    }
+
+
+    .review {
+        width: 560px;
+
+        @media screen and (max-width: 991px) {
+            width: 100%;
+        }
+
+        .card {
+            margin-bottom: 5px;
+
+            .fa-star {
+                color: orange;
+            }
+        }
+
+        .card:hover {
+            border-color: $maincolor;
+        }
+    }
+}
+
+// sponsorship
+.sponsor-page {
+    .title {
+        padding-left: 15px;
+    }
+
+    #payment-form {
+        margin: 15px 0;
+
+        .form-content {
+            width: 70%;
+            margin: 0 auto;
+
+            .text {
+                width: 90%;
+                margin: 10px auto 20px auto;
+                font-size: 16px;
+
+                @media screen and (max-width: 575px) {
+                    width: 100%;
+                }
+            }
+
+            .spons-container {
+                display: flex;
+                justify-content: space-between;
+
+                    @media screen and (max-width: 991px) {
+                        display: block;
+                    }
+
+                    .card {
+                        @media screen and (max-width: 991px) {
+                            display: block;
+                            margin: 10px auto;
+                            width: 90%;
+                        }
+
+                        @media screen and (max-width: 575px) {
+                            width: 100%;
+                        }
+                    }
+
+                input {
+                    display: none;
+                }
+
+                label {
+                    cursor: pointer;
+                    display: inline-block;
+                    width: 30%;
+
+                    .sponsor-name {
+                        font-size: 18px;
+                    }
+                }
+
+                label:hover {
+                    color: $maincolor;
+                    background: $maincolorrgba;
+                    font-weight: bold;
+                }
+
+                input:checked + label {
+                    color: $maincolor;
+                    font-weight: bold;
+                }
+            }
+
+            section {
+                margin: 30px auto;
+                width: 80%;
+
+                @media screen and (max-width: 767px) {
+                    width: 90%;
+                }
+
+                @media screen and (max-width: 575px) {
+                    width: 100%;
+                }
+
+                .braintree-heading {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            button {
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+                padding: 5px 0;
+
+                @media screen and (max-width: 767px) {
+                    width: 90%;
+                }
+
+                @media screen and (max-width: 575px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// message
+.message {
+    width: 600px;
+    margin-top: 20px;
+
+    @media screen and (max-width: 767px) {
+        width: 95%;
+        margin: 20px auto 0 auto;
+    }
+
+    .msg-p {
+        height: 20px;
+        width: 400px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        transition: height 2s;
+    }
+
+    &:hover .msg-p {
+        overflow: visible;
+        white-space: unset;
+        height: auto;
+        min-height: 20px;
+    }
+
+    a {
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    i {
+        color: $maincolor;
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 25px;
+    }
+
+    .message-mail {
+        margin-top: 5px;
+    }
+
+    button {
+        width: 20%;
+        text-align: center;
+    }
+}
+
+// footer
+footer {
+    text-align: center;
+    background: $maincolor;
+    margin-top: 20px;
+    padding: 20px 0;
+    height: 10vh;
+
+    a {
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
