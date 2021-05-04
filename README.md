@@ -5,7 +5,7 @@ BoolDoctors è una web app responsive che permette agli utenti di ricercare medi
 &nbsp;
 \
 &nbsp;
-Le tecnologie utilizzate sono le seguenti:
+Le tecnologie utilizzate sono:
 * PHP con Laravel
 * Braintree
 * Javascript con VueJS
