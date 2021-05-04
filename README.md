@@ -15,6 +15,7 @@ Le tecnologie utilizzate sono le seguenti:
 &nbsp;
 \
 &nbsp;
+
 I comandi da lanciare per visualizzare il progetto sono i seguenti:
 * composer install
 * npm install
