@@ -23,6 +23,10 @@ I comandi da lanciare per visualizzare il progetto sono i seguenti:
 * importare il database e modificare il file .env
 * php artisan key:generate
 * php artisan storage:link
+\
+&nbsp;
+
+<sup>(La password di ogni utente è "paperino")</sup>
 
 
 
