@@ -11,6 +11,17 @@ Le tecnologie utilizzate sono le seguenti:
 * Javascript con VueJS
 * chiamate Ajax
 * SCSS
+\
+&nbsp;
+\
+&nbsp;
+I comandi da lanciare per visualizzare il progetto sono i seguenti:
+* composer install
+* npm install
+* copy .env.example .env 
+* importare il database e modificare il file .env
+* php artisan key:generate
+* php artisan storage:link
 
 
 
