@@ -62,10 +62,14 @@
 
                     {{-- pulsante per acquistare una sponsorizzazione --}}
                     @if (count(Auth::user()->sponsorships) > 0)
-                    <button class="btn custom-button" data-toggle="modal" data-target="#modalSponsor">
-                        <i class="fas fa-shopping-cart"></i>
-                        Dettagli sponsorizzazione
-                    </button>
+                        @foreach (Auth::user()->sponsorships as $sponsor)
+                            @if ($sponsor->pivot->expiration_time > $currentDate)
+                                <button class="btn custom-button" data-toggle="modal" data-target="#modalSponsor">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Dettagli sponsorizzazione
+                                </button>
+                            @endif
+                        @endforeach
                     @else
                     <button class="btn custom-button">
                         <a href="{{ route('buySponsorship', ['user' => Auth::user()]) }}">
