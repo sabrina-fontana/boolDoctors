@@ -62,22 +62,28 @@
 
                     {{-- pulsante per acquistare una sponsorizzazione --}}
                     @if (count(Auth::user()->sponsorships) > 0)
-                        @foreach (Auth::user()->sponsorships as $sponsor)
-                            @if ($sponsor->pivot->expiration_time > $currentDate)
-                                <button class="btn custom-button" data-toggle="modal" data-target="#modalSponsor">
+                        @if (end(Auth::user()->sponsorships)[0]->pivot->expiration_time > $currentDate)
+                            <button class="btn custom-button" data-toggle="modal" data-target="#modalSponsor">
+                                <i class="fas fa-shopping-cart"></i>
+                                Dettagli sponsorizzazione
+                            </button>
+                        @else
+                            <button class="btn custom-button">
+                                <a href="{{ route('buySponsorship', ['user' => Auth::user()]) }}">
                                     <i class="fas fa-shopping-cart"></i>
-                                    Dettagli sponsorizzazione
-                                </button>
-                            @endif
-                        @endforeach
+                                    Acquista sponsorizzazione
+                                </a>
+                            </button>
+                        @endif
                     @else
-                    <button class="btn custom-button">
-                        <a href="{{ route('buySponsorship', ['user' => Auth::user()]) }}">
-                            <i class="fas fa-shopping-cart"></i>
-                            Acquista sponsorizzazione
-                        </a>
-                    </button>
+                        <button class="btn custom-button">
+                            <a href="{{ route('buySponsorship', ['user' => Auth::user()]) }}">
+                                <i class="fas fa-shopping-cart"></i>
+                                Acquista sponsorizzazione
+                            </a>
+                        </button>
                     @endif
+
 
                     {{-- pulsante per aggiungere una prestazione --}}
                     <button class="btn custom-button" data-toggle="modal" data-target="#modalService">
